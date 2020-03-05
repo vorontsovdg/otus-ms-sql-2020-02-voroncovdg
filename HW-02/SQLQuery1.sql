@@ -69,7 +69,7 @@ WHERE delivery_method.DeliveryMethodName IN ('Road Freight', 'Post')
 SELECT TOP (10) ord.OrderDate, cust.CustomerName, men.FullName as [Salesman Full Name]
 FROM Sales.Orders as ord
 JOIN Sales.Customers as cust ON ord.CustomerID = cust.CustomerID
-JOIN Application.People as men ON ord.ContactPersonID = men.PersonID
+JOIN Application.People as men ON ord.SalespersonPersonID = men.PersonID
 ORDER BY ord.OrderDate DESC;
 
 

@@ -151,6 +151,3 @@ JOIN TotalPick tp ON i.OrderID = tp.OrderID
 ORDER BY ts.TotalInvoiceSum DESC;
 
 
-
-
-

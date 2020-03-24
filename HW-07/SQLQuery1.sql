@@ -1,4 +1,4 @@
---1. Довставлять в базу 5 записей используя insert в таблицу Customers или Suppliers
+--1. Р”РѕРІСЃС‚Р°РІР»СЏС‚СЊ РІ Р±Р°Р·Сѓ 5 Р·Р°РїРёСЃРµР№ РёСЃРїРѕР»СЊР·СѓСЏ insert РІ С‚Р°Р±Р»РёС†Сѓ Customers РёР»Рё Suppliers
 INSERT INTO Purchasing.Suppliers (
 	SupplierID
 	,SupplierName
@@ -167,21 +167,21 @@ VALUES (
 		,64847
 		,1);
 
---2. удалите 1 запись из Customers, которая была вами добавлена
+--2. СѓРґР°Р»РёС‚Рµ 1 Р·Р°РїРёСЃСЊ РёР· Customers, РєРѕС‚РѕСЂР°СЏ Р±С‹Р»Р° РІР°РјРё РґРѕР±Р°РІР»РµРЅР°
 DELETE FROM Purchasing.Suppliers
 WHERE SupplierID = 19;
 
---3. изменить одну запись, из добавленных через UPDATE
+--3. РёР·РјРµРЅРёС‚СЊ РѕРґРЅСѓ Р·Р°РїРёСЃСЊ, РёР· РґРѕР±Р°РІР»РµРЅРЅС‹С… С‡РµСЂРµР· UPDATE
 UPDATE Purchasing.Suppliers
 SET SupplierCategoryID += 1
 WHERE SupplierID = 20;
 
---4. Написать MERGE, который вставит вставит запись в клиенты, если ее там нет, и изменит если она уже есть
+--4. РќР°РїРёСЃР°С‚СЊ MERGE, РєРѕС‚РѕСЂС‹Р№ РІСЃС‚Р°РІРёС‚ РІСЃС‚Р°РІРёС‚ Р·Р°РїРёСЃСЊ РІ РєР»РёРµРЅС‚С‹, РµСЃР»Рё РµРµ С‚Р°Рј РЅРµС‚, Рё РёР·РјРµРЅРёС‚ РµСЃР»Рё РѕРЅР° СѓР¶Рµ РµСЃС‚СЊ
 MERGE Purchasing.Suppliers AS [target]
 USING (
-		SELECT 'Unknown Supplier' AS [SupplierName]--Этим будем вставлять
+		SELECT 'Unknown Supplier' AS [SupplierName]--РСЃРїРѕР»СЊР·СѓРµРј РґР»СЏ Insert'Р°
 		UNION
-		SELECT 'Trey Research' AS [SupplierName]--Этим будем апдейтить
+		SELECT 'Trey Research' AS [SupplierName]--РСЃРїРѕР»СЊР·СѓРµРј РґР»СЏ updat'Р°
 ) AS source
 ON [target].SupplierName = [source].SupplierName
 WHEN MATCHED
@@ -245,9 +245,10 @@ WHEN NOT MATCHED
 			,1);
 
 
---5. Напишите запрос, который выгрузит данные через bcp out и загрузить через bulk insert 
---Выгружаем данные
---Опции для выгрузки взял с сайта sql.ru https://www.sql.ru/forum/493094/ne-rabotaet-xp-cmdshell
+--5. РќР°РїРёС€РёС‚Рµ Р·Р°РїСЂРѕСЃ, РєРѕС‚РѕСЂС‹Р№ РІС‹РіСЂСѓР·РёС‚ РґР°РЅРЅС‹Рµ С‡РµСЂРµР· bcp out Рё Р·Р°РіСЂСѓР·РёС‚СЊ С‡РµСЂРµР· bulk insert 
+--Р’С‹РіСЂСѓР¶Р°РµРј РґР°РЅРЅС‹Рµ
+--РЎРЅР°С‡Р°Р»Р° РІС‹РіСЂСѓР·РєР° РЅРµ Р·Р°РїСѓСЃС‚РёР»Р°СЃСЊ
+--РћС‚РїС†РёРё РґР»СЏ РІС‹РіСЂСѓР·РєРё РІР·СЏР» СЃ СЃР°Р№С‚Р° sql.ru https://www.sql.ru/forum/493094/ne-rabotaet-xp-cmdshell
 -- To allow advanced options to be changed.
 EXEC sp_configure 'show advanced options', 1
 GO
@@ -264,17 +265,17 @@ GO
 EXEC master..xp_cmdshell 'bcp "[WideWorldImporters].Sales.Orders" out "D:\SalesOrders.data" -T -w -t@@+@@ -S DESKTOP-4OQUVKT\SQL2017'
 GO
 
---Загружаем обратно
---Создадим копию таблицы Sales.Orders
+--Р—Р°РіСЂСѓР¶Р°РµРј РѕР±СЂР°С‚РЅРѕ
+--РЎРѕР·РґР°РµРј РєРѕРїРёСЋ С‚Р°Р±Р»РёС†С‹ Sales.Orders
 SELECT * INTO [WideWorldImporters].Sales.OrdersCopy
 FROM [WideWorldImporters].Sales.Orders
 WHERE 5 = 2;
---Смотрим, что таблица есть, но без данных
+--РЎРјРѕС‚СЂРёРј, С‡С‚Рѕ С‚Р°Р±Р»РёС†Р° РµСЃС‚СЊ, РЅРѕ Р±РµР· РґР°РЅРЅС‹С…
 SELECT * FROM [WideWorldImporters].Sales.OrdersCopy;
---На всякий случай удалим оттуда данные
+--РќР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№ СѓРґР°Р»РёРј РѕС‚С‚СѓРґР° РґР°РЅРЅС‹Рµ
 truncate table [WideWorldImporters].Sales.OrdersCopy;
 
---Начинаем
+--РќР°С‡РёРЅР°РµРј
 BEGIN TRAN
 BULK INSERT [WideWorldImporters].Sales.OrdersCopy
 	FROM "D:\SalesOrders.data"

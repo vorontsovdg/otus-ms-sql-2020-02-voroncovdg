@@ -16,7 +16,7 @@ SELECT *
 FROM (
     SELECT
         substring(c.CustomerName , charindex('(', c.customername) + 1, len(c.CustomerName) - charindex('(', c.CustomerName )-1) as [CustomerName]
-        , CAST(format( dateadd(MM, datediff(MM, 0, i.InvoiceDate), 0), 'dd.MM.yyyy') as Date) as [Month]
+        , format( dateadd(MM, datediff(MM, 0, i.InvoiceDate), 0), 'dd.MM.yyyy') as [Month]
     FROM Sales.Customers c
     join Sales.Invoices i on i.CustomerID = c.CustomerID 
     where c.CustomerID BETWEEN 2 and 6
@@ -30,7 +30,8 @@ PIVOT
                 ,[Gasport, NY]
                 ,[Jessie, ND]
                 )
-    ) as pvt;
+    ) as pvt
+order by cast([Month] as Date) ;
 
 /*
  * 2. Для всех клиентов с именем, в котором есть Tailspin Toys

@@ -1,0 +1,8 @@
+C:\Users\vdgdi\source\repos\HW Task2\HW Task2\bin\Debug\HW Task2.dll
+C:\Users\vdgdi\source\repos\HW Task2\HW Task2\bin\Debug\HW Task2.pdb
+C:\Users\vdgdi\source\repos\HW Task2\HW Task2\bin\Debug\Microsoft.Analytics.Interfaces.dll
+C:\Users\vdgdi\source\repos\HW Task2\HW Task2\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+C:\Users\vdgdi\source\repos\HW Task2\HW Task2\bin\Debug\Microsoft.Analytics.Types.dll
+C:\Users\vdgdi\source\repos\HW Task2\HW Task2\obj\Debug\HW Task2.csproj.CopyComplete
+C:\Users\vdgdi\source\repos\HW Task2\HW Task2\obj\Debug\HW Task2.dll
+C:\Users\vdgdi\source\repos\HW Task2\HW Task2\obj\Debug\HW Task2.pdb

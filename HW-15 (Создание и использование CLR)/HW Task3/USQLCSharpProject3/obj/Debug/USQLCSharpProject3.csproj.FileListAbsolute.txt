@@ -1,0 +1,9 @@
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\bin\Debug\USQLCSharpProject3.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\bin\Debug\USQLCSharpProject3.pdb
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\bin\Debug\Microsoft.Analytics.Interfaces.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\bin\Debug\Microsoft.Analytics.Types.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\obj\Debug\USQLCSharpProject3.csprojAssemblyReference.cache
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\obj\Debug\USQLCSharpProject3.csproj.CopyComplete
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\obj\Debug\USQLCSharpProject3.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject3\USQLCSharpProject3\obj\Debug\USQLCSharpProject3.pdb

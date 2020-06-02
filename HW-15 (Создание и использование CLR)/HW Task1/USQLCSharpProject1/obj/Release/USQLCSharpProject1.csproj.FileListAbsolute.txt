@@ -1,0 +1,9 @@
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\bin\Release\USQLCSharpProject1.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\bin\Release\USQLCSharpProject1.pdb
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\bin\Release\Microsoft.Analytics.Interfaces.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\bin\Release\Microsoft.Analytics.Interfaces.Streaming.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\bin\Release\Microsoft.Analytics.Types.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\obj\Release\USQLCSharpProject1.csprojAssemblyReference.cache
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\obj\Release\USQLCSharpProject1.csproj.CopyComplete
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\obj\Release\USQLCSharpProject1.dll
+C:\Users\vdgdi\source\repos\USQLCSharpProject1\USQLCSharpProject1\obj\Release\USQLCSharpProject1.pdb
